@@ -10,7 +10,7 @@ html {
   html, body {
     width: 100%;
     overflow-x: hidden;
-    }
+}
   body::-webkit-scrollbar {
     width: 11px;
   }
@@ -314,14 +314,14 @@ html {
     }
  @media not all and (min-width: 640px) {
         .myimage {
-            width: 460px;
+            width: 350px;
             height: 290px;
             position: relative;
             filter: brightness(0.4);
         }
         .mydiv {
             position: absolute;
-            width: 460px;
+            width: 100%;
             padding: 20px 30px;
         }
         .mytitle {
@@ -330,7 +330,7 @@ html {
         }
         .mytext {
             text-align: center;
-            font-size: .7rem;
+            font-size: .64rem;
             width: 100%;
             opacity: 0;
             transition: all ease-in-out .5s;
@@ -355,4 +355,5 @@ html {
             position: absolute;
             z-index: 1;
         }
+
 }
