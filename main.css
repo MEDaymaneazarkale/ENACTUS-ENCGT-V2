@@ -312,3 +312,47 @@ html {
         background-color: #303030;
         background-blend-mode: multiply;
     }
+ @media not all and (min-width: 640px) {
+        .myimage {
+            width: 460px;
+            height: 290px;
+            position: relative;
+            filter: brightness(0.4);
+        }
+        .mydiv {
+            position: absolute;
+            width: 460px;
+            padding: 20px 30px;
+        }
+        .mytitle {
+            transform: translateY(110px);
+            transition: all ease-out .5s;
+        }
+        .mytext {
+            text-align: center;
+            font-size: .7rem;
+            width: 100%;
+            opacity: 0;
+            transition: all ease-in-out .5s;
+            padding-inline: 20px;
+        }
+        
+        .mydiv:hover > .mytext{
+            opacity: 1;
+            transition-delay: .4s;
+        }
+        .mydiv:hover > .mytitle {
+            transform: translateY(0);
+        }
+        
+        .myimage2 {
+            width: 460px;
+            height: 290px;
+            position: relative;
+            filter: brightness(0.4);
+        }
+        .mydiv2 {
+            position: absolute;
+            z-index: 1;
+        }
+}
