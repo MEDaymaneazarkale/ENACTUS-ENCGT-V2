@@ -13,13 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,600&family=Space+Grotesk:wght@300;400;500;600;700&family=Zen+Dots&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="Back.js"></script>
     <title>Enactus ENCG Tanger</title>
 </head>
 <body>
     <main class="bg-[#252525]">
         <!-- Navigation bar -->
-        <nav class="bg-black flex justify-between items-center h-[12vh] pl-4">
+        <nav id="navbar" class="bg-black max-sm:fixed max-sm:z-30 max-sm:w-full flex justify-between items-center h-[12vh] pl-4">
             <a href="index.html"><img src="images/enactus.png" alt="Enactus logo" class="w-16"></a> 
             <ul class="flex gap-4 justify-end mx-16 max-sm:hidden">
                 <li class="mx-4 dropdown hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm"><a href="#">A propos de nous</a>
@@ -47,12 +46,42 @@
                 <li class="mx-4 hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm"><a href="sponsors.html">Nos Sponsors</a></li>
                 <li class="mx-4 hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm"><a href="mailto:Contact@enactusencgtanger.com">Contactez nous</a></li>
             </ul>
+            <!-- menu icon -->
             <ul class="hidden max-sm:block">
-                <li class="mx-4 cursor-pointer"><i class="fa-sharp fa-solid fa-bars text-enactus text-2xl"></i></li>
+                <li class="mx-4 cursor-pointer"><button id="button" class="fa-sharp fa-solid fa-bars text-enactus text-2xl"></button></li>
             </ul>
         </nav>
+        <!-- responsive nav -->
+        <div id="slidebar" class="mr-[-550px] max-sm:flex hidden z-20 fixed w-full h-screen justify-center items-center right-0 bg-black">
+            <ul class="flex flex-col gap-4">
+                <li class="mx-4 dropdown hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="#">A propos de nous</a>
+                    <ul>
+                       <li class=""><a href="about_encgt.html" class="hover:text-[#fdc301] transition-all">Notre école</a></li>
+                       <li class=""><a href="about_enactusMorocco.html" class="hover:text-[#fdc301] transition-all">Notre Organisation</a></li>
+                       <li class=""><a href="about_us.html" class="hover:text-[#fdc301] transition-all">Enactus ENCG Tanger</a></li>
+                    </ul>
+                </li>
+                <li class="mx-4 dropdown hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="#">Nos Projets</a>
+                    <ul>
+                        <li><a href="projet_RDS.html" class="hover:text-[#fdc301] transition-all">La Roue Du Salon</a></li>
+                        <li><a href="project_Enfactus.html" class="hover:text-[#fdc301] transition-all">Enfactus</a></li>
+                        <li><a href="project_Ovulove.html" class="hover:text-[#fdc301] transition-all">Ovulove</a></li>
+                        <li><a href="projet_Olidose.html" class="hover:text-[#fdc301] transition-all">Olidose</a></li>
+                    </ul>
+                </li>
+                <li class="mx-4 hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="nos realisations.html">Nos Réalisations</a></li>
+                <li class="mx-4 dropdown hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="#">Nos Evenements</a>
+                    <ul>
+                        <li class=""><a href="Nos_evenements_Enactusday.html" class="hover:text-[#fdc301] transition-all">Enactusday</a></li>
+                        <li class=""><a href="Nos_evenements_PowerSkills.html" class="hover:text-[#fdc301] transition-all">Power Skills</a></li>
+                     </ul>
+                </li>
+                <li class="mx-4 hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="sponsors.html">Nos Sponsors</a></li>
+                <li class="mx-4 hover-underline-animation relative py-4 text-center text-[#fdc300] font-black hover:text-white transition-all duration-500	text-sm max-sm:text-xl"><a href="mailto:Contact@enactusencgtanger.com">Contactez nous</a></li>
+            </ul>
+        </div>
         <!-- header -->
-    <header class="h-[calc(100vh-12vh)] flex flex-col gap-8 justify-center items-center w-full enactus-day">
+    <header class="h-[100dvh] flex flex-col gap-8 justify-center items-center w-full enactus-day">
         <h1 class="text-white text-5xl max-sm:text-base max-sm:px-4 my-font text-center">SOCIAL IMPACTORS <br><span class="my-font text-[#fdc300]">FOR A BETTER FUTURE<br></span> IN THE MAKING</h1>      
         <a href="about_us.html" tabindex="0" class="px-8 py-4 bg-black text-white rounded-xl font-bold w-fit hover:bg-[#fdc300] hover:text-black transition-all	">A propos de nous</a>
     </header>
@@ -62,7 +91,7 @@
         <div class="flex">
         <div class="bg-gray-100 w-1/2 max-sm:py-8 max-sm:px-4 max-sm:h-auto h-screen px-16 max-sm:px-2 flex flex-col justify-center gap-8 max-sm:gap-0">
             <h2 class="max-sm:hidden pt-8 text-5xl max-sm:text-[24px] max-sm:leading-[30px] font-black text-enactus my-font leading-[60px]">Changing<span class="text-black block my-font">The World</span></h2>
-            <p class="font-poppins my-4 max-sm:text-[2vmin] text-left font-bold">
+            <p class="font-poppins my-4 max-sm:text-[2vmin] text-left max-sm:text-justify font-bold">
                 C'est ce que constitue la raison d'être de notre club, dont le
                 but est d'émerger les jeunes entrepreneurs au service de
                 l'humanité et de l'environnement, les accompagner et les
@@ -70,7 +99,7 @@
                 projets innovants concrets.
                 <br>
             </p>
-            <p class="font-poppins my-4 max-sm:text-[2vmin] max-sm:my-2 text-left font-bold">
+            <p class="font-poppins my-4 max-sm:text-[2vmin] max-sm:text-justify max-sm:my-2 text-left font-bold">
                 Être "<span class="text-enactus font-poppins">ENACTEUR</span>" signifie beaucoup, c’est devenir leader sans
                 être âgé, c'est devenir expert avant d'être diplômé, c'est de
                 créer l'opportunité et ne pas l'attendre, et finalement c'est
@@ -188,5 +217,6 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
     </svg>
 </div>
+<script src="Back.js"></script>
 </body>
 </html>

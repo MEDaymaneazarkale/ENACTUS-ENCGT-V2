@@ -221,11 +221,11 @@ html {
         transition: all 200ms linear;
     }
     /*Dropdown*/
-    nav li:hover a {
+    li:hover a {
         color: #ffffff;
         background-color: #000000;
     }
-    nav li ul {
+    li ul {
         float: left;
         left: -40px;
         right: -40px;
@@ -240,20 +240,20 @@ html {
              -o-transition: all .25s ease;
                 transition: all .25s ease;
     }
-    nav li:hover ul {
+    li:hover ul {
         opacity: 1;
         top: 50px;
         visibility: visible;
         background-color: #000000;
     }
-    nav li ul li {
+    li ul li {
         float: none;
         text-align: center;
         width: 100%;
         padding: 5px 4px;
         color: #fdc300;
     }
-    nav li ul a:hover {
+    li ul a:hover {
         color: whitesmoke;
     }
     .background-4 {
@@ -356,4 +356,10 @@ html {
             z-index: 1;
         }
 
+}
+#slidebar {
+    transition: all ease-in-out 1s;
+}
+#navbar {
+    transition: top  .6s;
 }

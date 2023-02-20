@@ -36,3 +36,32 @@
 	});
 	
 })(jQuery);
+
+// navigation bar scrolling mechanisme
+const button = document.getElementById("button");
+const slide = document.getElementById("slidebar");
+const navBar = document.getElementById("navBar");
+let switcher = true;
+
+button.addEventListener("click",function me(){
+	if (switcher == false) {
+		switcher = true;
+		slide.style.marginRight = "-550px";
+	}
+	else if (switcher == true) {
+		switcher = false;
+		slide.style.marginRight = "0px";
+	}
+});
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
